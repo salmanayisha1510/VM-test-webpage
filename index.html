@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kulfi Hub - Best Mango, Pista, Malai Kulfi in Chennai. ₹40-₹60. Order online now!">
+    <meta name="keywords" content="kulfi chennai, mango kulfi, pista kulfi, malai kulfi, buy kulfi online">
+    <title>Kulfi Hub - Best Kulfi in Chennai | Mango ₹40</title>
+</head>
+<body>
+    <header>
+        <h1>KULFI HUB</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>            
+                <li><a href="#search">Search</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="center-text">
+        <h2>Welcome to Kulfi Hub</h2>
+        <p>We serve the most delicious, creamy kulfis made with love and tradition.</p>
+    </section>
+
+    <section id="search">
+        <h2>Search for a Flavor</h2>
+        <input type="text" id="searchInput" onkeyup="filterKulfis()" placeholder="Type a flavor (e.g. Mango)...">
+    </section>
+   
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul id="kulfiList">
+            <li class="kulfi-item"><span>Mango Kulfi - ₹40</span> <button onclick="buyKulfi('Mango', 40)">Buy</button></li>
+            <li class="kulfi-item"><span>Pista Kulfi - ₹40</span> <button onclick="buyKulfi('Pista', 40)">Buy</button></li>
+            <li class="kulfi-item"><span>Malai Kulfi - ₹50</span> <button onclick="buyKulfi('Malai', 50)">Buy</button></li>
+            <li class="kulfi-item"><span>Chocolate Kulfi - ₹50</span> <button onclick="buyKulfi('Chocolate', 50)">Buy</button></li>
+            <li class="kulfi-item"><span>Rose Kulfi - ₹60</span> <button onclick="buyKulfi('Rose', 60)">Buy</button></li>
+        </ul>
+    </section>
+
+    
+    <section id="order">
+        <h2>Your Order</h2>
+        <ul id="orderList" style="list-style: none; padding: 0;">
+                    </ul>
+        <button onclick="clearOrder()" id="clearBtn" style="display:none;">Clear Order</button>
+    </section>
+
+    <section id="bill-card">
+        <h3>TOTAL BILL</h3>
+        <div class="bill-stats">
+            <p>Total Items: <strong id="totalQty">0</strong></p>
+            <p>Amount Payable: <strong>₹<span id="totalBill">0</span></strong></p>
+        </div>
+    </section>
+
+    <section id="feedback">
+        <h2>We Value Your Feedback</h2>
+        <form id="feedbackForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" required><br><br>
+
+            <label for="message">Your Feedback:</label><br>
+            <textarea id="message" rows="4"></textarea><br><br>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
